@@ -1,0 +1,83 @@
+<template>
+  <div id="image-container">
+      <!-- <img id="floatingImage" src="./../assets/duotone.png"> -->
+      <div class="arrow">
+  <div class="arrow-top"></div>
+  <div class="arrow-bottom"></div>
+</div>
+  </div>
+</template>
+
+<script>
+export default {
+    name: "ImageFloat"
+}
+</script>
+
+<style>
+#floatingImage {
+    z-index: -1;
+    height: 10vw;
+}
+#image-container {
+    position: absolute;
+    display: flex;
+}
+
+
+.arrow {
+  cursor: pointer;
+  height: 8vw;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: transform .1s;
+  width: 3.5vw;
+}
+.arrow-top, .arrow-bottom {
+  background-color: #666;
+  height: 4px;
+  left: -5px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+.arrow-top:after, .arrow-bottom:after {
+  background-color: #b0c5e0;
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.15s;
+}
+.arrow-top {
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+}
+.arrow-top:after {
+  left: 100%;
+  right: 0;
+  transition-delay: 0s;
+}
+.arrow-bottom {
+  transform: rotate(-45deg);
+  transform-origin: top right;
+}
+.arrow-bottom:after {
+  left: 0;
+  right: 100%;
+  transition-delay: 0.15s;
+}
+.arrow:hover .arrow-top:after {
+  left: 0;
+  transition-delay: 0.15s;
+}
+.arrow:hover .arrow-bottom:after {
+  right: 0;
+  transition-delay: 0s;
+}
+.arrow:active {
+  transform: translateX(-50%) translateY(-50%) scale(0.9);
+}
+</style>

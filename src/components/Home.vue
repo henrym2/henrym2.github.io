@@ -1,29 +1,27 @@
 <template>
   <div>
-    <Home v-if="!showMenu"></Home>
-    <Menu v-if="showMenu"></Menu>
+    <TopBar></TopBar>
+    <div id="home">
+      <Title></Title>
+    </div>
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
-import Menu from './components/Menu.vue'
+import Title from './Title.vue'
+import TopBar from './TopBar.vue'
 export default {
   name: 'App',
   components: {
-    Home,
-    Menu
+    Title,
+    TopBar
   },
-  data () {
-      return {
-          showMenu: false
-      }
-  },
+
 }
 </script>
 
 <style>
-#app {
+#home {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,7 +30,9 @@ export default {
   align-content: center;
   align-items: center;
   justify-content: center;
-  height: 100%
+  height: 97vh;
+  z-index: 0;
+  overflow: hidden;
 }
 
 </style>
