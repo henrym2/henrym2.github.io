@@ -6,30 +6,37 @@
         </div>
         <div class="item" id="projects">
             <p>00</p>
+            <a href='#'>
             <div class="flip-text">
                 <div class="flip-text-inner">
                     <div class="flip-text-front">Projects</div>
                     <div class="flip-text-side">Projects</div>
                 </div>
             </div>
+            </a>
         </div>
         <div class="item" id="contact">
             <p>01</p>
-            <div class="flip-text">
-                <div class="flip-text-inner">
-                    <div class="flip-text-front">Contact</div>
-                    <div class="flip-text-side">Contact</div>
-                </div>
+            <a href='#'>
+            <div class="flip-text" id="draw">
+                    <div class="flip-text-inner">
+                        <div class="flip-text-front">Contact</div>
+                        <div class="flip-text-side">Contact</div>
+                    </div>
+    
             </div>
+            </a>
         </div>
         <div class="item" id="aboutMe">
-            <p>10</p>
+            <p>02</p>
+            <a href='#'>
             <div class="flip-text">
                 <div class="flip-text-inner">
                     <div class="flip-text-front">About Me</div>
                     <div class="flip-text-side">About Me</div>
                 </div>
             </div>
+            </a>
         </div>
     </div>
   </div>
@@ -46,6 +53,10 @@ export default {
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 #menu {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -104,29 +115,49 @@ export default {
     display: flex;
 }
 
+.item a {
+    color: white;
+    
+}
+
 .menu-container {
     display: flex;
     flex-direction: column;
 }
 .flip-text{
-    font-size: 6.5vw;
     background-color: transparent;
     perspective: 1000px;
     
 }
 
 .flip-text-inner {
+  font-size: 6.5vw;
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.5s;
+  transition: transform 0.4s;
   transform-style: preserve-3d;
-  transform: translateZ(-3vw);
+  /* transform: translateZ(-3vw) ; */
+  text-decoration: underline;
 }
 
 .flip-text:hover .flip-text-inner {
-    transform: rotateX(90deg) translateZ(-3vw) ;
+    transform: rotateX(90deg) translateZ(2vw) ;
+}
+
+
+.flip-text:hover .flip-text-front {
+    animation: fade-in 0.35s reverse;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .flip-text-front, .flip-text-side {
@@ -135,8 +166,13 @@ export default {
     -webkit-backface-visibility: hidden;
 }
 
+.flip-text-front {
+    font-family: 'Poiret One', cursive;
+}
+
 .flip-text-side {
-    transform: rotateX(-90deg) translateZ(3vw) translateY(-3vh);
+    font-family: 'Playfair Display', serif;
+    transform: rotateX(-90deg)  translateZ(-2vw) translateY(10vh);
 }
 
 

@@ -4,7 +4,7 @@
       Matthew Henry
     </h1>
     <div class="sub-container">
-      <h2>Software Engineering </h2>
+      <h2>Software Engineer</h2>
       <ImageFloat class="image-floating"></ImageFloat>
     </div>
   </div>
@@ -38,7 +38,11 @@ h1 {
 h2 {
   font-family: 'Poiret One', cursive;
   font-size: 5vw;
-  margin: -2vw 0 0 9vw 
+  margin: -2vw 0 0 16vw 
+}
+
+.scale-in-bottom {
+  animation: scale-in-ver-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .image-floating {
@@ -79,6 +83,23 @@ h2 {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: black; }
+}
+
+@keyframes scale-in-ver-bottom {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    opacity: 1;
+  }
 }
 
 </style>
