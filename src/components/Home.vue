@@ -1,6 +1,5 @@
 <template>
   <div>
-    <TopBar></TopBar>
     <div id="home">
       <Title></Title>
     </div>
@@ -9,12 +8,10 @@
 
 <script>
 import Title from './Title.vue'
-import TopBar from './TopBar.vue'
 export default {
   name: 'App',
   components: {
     Title,
-    TopBar
   },
 
 }

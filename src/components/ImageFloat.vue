@@ -1,11 +1,10 @@
 <template>
-  <div id="image-container">
-      <!-- <img id="floatingImage" src="./../assets/duotone.png"> -->
-      <div class="arrow">
-  <div class="arrow-top"></div>
-  <div class="arrow-bottom"></div>
+<div id="image-container">
+    <div class="arrow">
+        <div class="arrow-top"></div>
+        <div class="arrow-bottom"></div>
+    </div>
 </div>
-  </div>
 </template>
 
 <script>
