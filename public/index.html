@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css" integrity="sha256-qS+snwBgqr+iFVpBB58C9UCxKFhyL03YHpZfdNUhSEw=" crossorigin="anonymous">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body id="body">
@@ -15,9 +17,20 @@
     <!-- built files will be auto injected -->
   </body>
   <style>
-    #body{
-      background-image: linear-gradient(98deg, #b2c0d2, #cbd5e1, #e5eaf0, #ffffff);
-      overflow: hidden;
+    body{
+      
+    }
+
+    html {
+      background: linear-gradient(to right,#cfdae9, #dae4f0, #eef4fb, #ffffff) ;
+      background-size: cover;
+      animation: gradient 10s ease infinite;
+    }
+
+    @keyframes gradient {
+      0%{background-position:10% 0%}
+      50%{background-position:91% 100%}
+      100%{background-position:10% 0%}
     }
   </style>
 </html>

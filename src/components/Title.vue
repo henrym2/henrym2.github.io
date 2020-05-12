@@ -5,7 +5,7 @@
     </h1>
     <div class="sub-container">
       <h2>Software Engineer</h2>
-      <ImageFloat class="image-floating"></ImageFloat>
+      <ImageFloat :click=arrowClicked class="image-floating"></ImageFloat>
     </div>
   </div>
 </template>
@@ -15,10 +15,14 @@ import ImageFloat from './ImageFloat.vue'
 export default {
   name: 'Title',
   props: {
-    msg: String
+    next: Function
   },
   components: {
     ImageFloat
+  },methods: {
+    arrowClicked () {
+      this.next()
+    }
   }
 }
 </script>
@@ -59,7 +63,8 @@ h2 {
   display: flex;
   flex-direction:column;
   text-align: center;
-  margin-right: 4vw
+  margin-right: 4vw;
+  /* mix-blend-mode: difference; */
 }
 
 .typewriter {

@@ -1,11 +1,18 @@
 <template>
   <div id="menu" class="menu-container">
     <div class="item-container">
+        <div class="item" id="returnHome">
+            <p>00
+                <a href='#' @click="changePage(0)">
+                    <span class="draw">Home</span>
+                </a>
+            </p>
+        </div>
         <div class="item">
             <img id="halls" src="./../assets/halls.jpg">
         </div>
         <div class="item" id="projects">
-            <p>00</p>
+            <p>01</p>
             <a href='#'>
             <div class="flip-text">
                 <div class="flip-text-inner">
@@ -16,7 +23,7 @@
             </a>
         </div>
         <div class="item" id="contact">
-            <p>01</p>
+            <p>02</p>
             <a href='#'>
             <div class="flip-text" id="draw">
                     <div class="flip-text-inner">
@@ -28,7 +35,7 @@
             </a>
         </div>
         <div class="item" id="aboutMe">
-            <p>02</p>
+            <p>03</p>
             <a href='#'>
             <div class="flip-text">
                 <div class="flip-text-inner">
@@ -45,10 +52,18 @@
 <script>
 export default {
     name: "Menu",
+    props: {
+        pageChange: Function
+    },
     data () {
         return {
         }
     },
+    methods: {
+        changePage (page) {
+            this.pageChange(page)
+        }
+    }
 }
 </script>
 
@@ -58,6 +73,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 #menu {
+          overflow: hidden;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -79,30 +95,45 @@ export default {
   color: white
 }
 
+#returnHome {
+    position: absolute;
+    left: 13vw;
+    top: 8vh;
+    z-index: 3;
+}
+
 #projects {
     position: absolute;
-    margin-left: 27vw;
-    top: 18vh;
+    margin-left: 60vw;
+    top: 25vh;
 }
 
 #contact {
     position: absolute;
-    margin-left: 35vw;
+    margin-left: 30vw;
     top:40vh
 }
 
 #halls {
     position: absolute;
     left: 5vw;
-    top: 25vh;
-    width: 27vw;
+    top: 19vh;
+    width: 35vw;
+    z-index: 0;
 }
 
 #aboutMe {
     position: absolute;
     left: 55vw;
-    top: 60vh;
+    top: 68vh;
     white-space: nowrap;
+}
+
+.draw {
+    position: absolute;
+    font-size: 6.5vw;
+    font-family: 'Playfair Display', serif;
+    margin-top: -3vh;
 }
 
 .item-container{
@@ -117,7 +148,11 @@ export default {
 
 .item a {
     color: white;
-    
+    text-decoration: none;
+}
+
+.item a:hover {
+    color: inherit
 }
 
 .menu-container {

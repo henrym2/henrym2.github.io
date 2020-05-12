@@ -1,5 +1,6 @@
 <template>
     <div class="topBar">
+        <!-- <h6>{{location}}</h6> -->
         <div id="hamburger">
             <button v-on:click="burgerClick()">
                 <svg x="0" y="0" width="2.2vw" height="2.5vh" v-if="!showMenu">
@@ -23,7 +24,8 @@ export default {
     name: "TopBar",
     data () {
         return {
-            showMenu: false
+            showMenu: false,
+            location: "Home"
         }
     },
     props: {
@@ -44,7 +46,7 @@ export default {
     display: flex;
     position: absolute;
     flex-direction: row;
-    width: 99%
+    width: 99%;
 }
 button {
     background: none;

@@ -1,5 +1,5 @@
 <template>
-<div id="image-container">
+<div id="image-container" @click=clicked>
     <div class="arrow">
         <div class="arrow-top"></div>
         <div class="arrow-bottom"></div>
@@ -9,7 +9,15 @@
 
 <script>
 export default {
-    name: "ImageFloat"
+    name: "ImageFloat",
+    props: {
+        click: Function
+    },
+    methods: {
+        clicked () {
+            this.click()
+        }
+    }
 }
 </script>
 
