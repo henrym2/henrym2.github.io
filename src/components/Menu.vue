@@ -13,7 +13,7 @@
         </div>
         <div class="item" id="projects">
             <p>01</p>
-            <a href='#'>
+            <a href='#' @click="changePage(1)">
             <div class="flip-text">
                 <div class="flip-text-inner">
                     <div class="flip-text-front">Projects</div>
@@ -24,7 +24,7 @@
         </div>
         <div class="item" id="contact">
             <p>02</p>
-            <a href='#'>
+            <a href='#' @click="changePage(2)">
             <div class="flip-text" id="draw">
                     <div class="flip-text-inner">
                         <div class="flip-text-front">Contact</div>
@@ -36,7 +36,7 @@
         </div>
         <div class="item" id="aboutMe">
             <p>03</p>
-            <a href='#'>
+            <a href='#' @click="changePage(3)">
             <div class="flip-text">
                 <div class="flip-text-inner">
                     <div class="flip-text-front">About Me</div>
@@ -61,7 +61,7 @@ export default {
     },
     methods: {
         changePage (page) {
-            this.pageChange(page)
+            this.$emit('pageChange', page)
         }
     }
 }

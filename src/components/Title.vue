@@ -21,7 +21,7 @@ export default {
     ImageFloat
   },methods: {
     arrowClicked () {
-      this.next()
+      this.$emit("arrowClicked")
     }
   }
 }

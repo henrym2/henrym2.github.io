@@ -21,12 +21,12 @@
         <footer class="card-footer">
           <p class="card-footer-item">
             <span>
-              View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Github</a>
+              View on <a target="_blank" :href="project.repo">Github</a>
             </span>
           </p>
           <p v-if="project.link" class="card-footer-item">
             <span>
-              See it in <a href="project.link">Action</a>
+              See it in <a target="_blank" :href="project.link">Action</a>
             </span>
           </p>
         </footer>
@@ -145,6 +145,7 @@ data () {
 
 #githubtui-card {
   width: 30vw;
+  margin-bottom: 3vh;
 }
 
 #githubtui-image {

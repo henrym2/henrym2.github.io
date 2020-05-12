@@ -2,32 +2,45 @@
   <div>
     <div id="home">
       <transition name="slideleft">
-        <Title v-show="!projects" :next=showProjects></Title>
-      </transition>
-      <transition name="slideright">
-        <Projects v-if="projects"></Projects>
+        <Title v-show="page == 0" @arrowClicked=showProjects></Title>
       </transition>
     </div>
+    <transition name="slideright">
+      <Projects v-if="page == 1"></Projects>
+    </transition>
+    <transition name="slideright">
+      <AboutMe v-if="page == 3"></AboutMe>
+    </transition>
   </div>
 </template>
 
 <script>
 import Title from './Title.vue'
 import Projects from './Projects'
+import AboutMe from './AboutMe'
 export default {
   name: 'App',
   components: {
     Title,
-    Projects
+    Projects,
+    AboutMe
   },
   data () {
     return {
-      projects: false
+      // page: 0
+    }
+  },
+  props: {
+    page: {
+      type: Number,
+      default: 0
     }
   },
   methods: {
     showProjects () {
-      this.projects = !this.projects
+      this.$emit("arrowClicked")
+      // this.page = 1;
+      // this.$emit("a")
     }
   }
 

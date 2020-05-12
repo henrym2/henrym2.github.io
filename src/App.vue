@@ -1,9 +1,9 @@
 <template>
   <div>
-    <TopBar :menuClick="menuClick"></TopBar>
-    <Home></Home>
+    <TopBar :location=location :showMenu=showMenu @menuTrigger="menuClick"></TopBar>
+    <Home :page=currentPage @arrowClicked="toPage(1)"></Home>
     <transition name="fade">
-    <Menu v-show="showMenu"></Menu>
+    <Menu v-show="showMenu" @pageChange="toPage"></Menu>
     </transition>
   </div>
 </template>
@@ -13,22 +13,36 @@ import Home from './components/Home.vue'
 import Menu from './components/Menu.vue'
 import TopBar from './components/TopBar.vue'
 
+const pages = {
+  0: "Home",
+  1: "Projects",
+  2: "Contact",
+  3: "About"
+}
+
 export default {
+  
   name: 'App',
   components: {
     Home,
     Menu,
     TopBar
-
   },
   data () {
       return {
-          showMenu: false
+          showMenu: false,
+          currentPage: 0,
+          location: "Home"
       }
   },
   methods: {
     menuClick () {
       this.showMenu = !this.showMenu;
+    },
+    toPage(page) {
+      this.location = pages[page];
+      this.currentPage = page;
+      this.showMenu = false
     }
   }
 }
@@ -53,7 +67,7 @@ export default {
 }
 
 .fade-leave-active {
-    animation: fade-in 0.7s cubic-bezier(1, 0.565, 0.575, 0.390) both reverse;
+    animation: fade-in 0.45s cubic-bezier(1, 0.565, 0.575, 0.390) both reverse;
 }
 
 /* ----------------------------------------------

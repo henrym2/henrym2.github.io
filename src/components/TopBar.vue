@@ -1,6 +1,6 @@
 <template>
     <div class="topBar">
-        <!-- <h6>{{location}}</h6> -->
+        <h6 id="location">{{location}}</h6>
         <div id="hamburger">
             <button v-on:click="burgerClick()">
                 <svg x="0" y="0" width="2.2vw" height="2.5vh" v-if="!showMenu">
@@ -24,30 +24,44 @@ export default {
     name: "TopBar",
     data () {
         return {
-            showMenu: false,
-            location: "Home"
+            
         }
     },
     props: {
-        menuClick: Function
+        showMenu: {
+            type: Boolean,
+            default: false,
+        },
+        location: {
+            type: String,
+            default: "Home"
+        }
     },
     methods: {
         burgerClick () {
-            this.menuClick()
-            this.showMenu = !this.showMenu
+            this.$emit("menuTrigger")
         }
     }
 }
 </script>
 
 <style scoped>
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 .topBar{
     display: flex;
     position: absolute;
     flex-direction: row;
     width: 99%;
 }
+
+#location {
+    margin-top: 1.8vh;
+    margin-left: 1vw;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2.5vh;
+}
+
 button {
     background: none;
 	color: inherit;
