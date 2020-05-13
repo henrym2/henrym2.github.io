@@ -11,9 +11,17 @@
           <a href="https://telnyx.com/">Telnyx</a> as an Intern and later as a contractor.
         </p>
         <br>
-        <p>Now, I'm working as an intern in the <a href="https://www.youtube.com/jobs/engineering/" target="_blank">Youtube</a> creator experience team based in Dublin, Ireland</p>
+        <p>Now, I'm working as an intern in the 
+            <a href="https://www.youtube.com/jobs/engineering/" target="_blank">Youtube</a> 
+            creator experience team based in Dublin, Ireland.
+        </p>
     </div>
-    
+    <br>
+    <div class="skill-body">
+        <p>I'm proficient in <a>Golang</a>, <a>JavaScript</a>, <a>Java</a>, <a>Python</a> and a few associated frameworks and design systems.</p>
+        <p>I've plenty learn in terms of Docker and DevOps practices but have a good deal of experience using both AWS and Azure services, 
+            with a preference for AWS</p>
+    </div>
     </div>
   </div>
 </div>
@@ -40,6 +48,20 @@ export default {
     align-content: flex-start;
 }
 
+.skill-body{
+    color: white;
+    mix-blend-mode: difference;
+    /* margin-top: 6vh; */
+    margin-left: 8vw;
+    max-width: 39vw;
+    white-space: normal;
+    /* font-family: 'Poiret One', cursive; */
+    font-family: 'Playfair Display', serif;
+
+    /* font-weight: bold; */
+    font-size: 2.4vh;
+}
+
 #about {
     display: flex;
     flex-flow: column wrap;
@@ -51,8 +73,10 @@ export default {
     margin-left: 5vw;
     max-width: 39vw;
     white-space: normal;
-    font-family: 'Poiret One', cursive;
-    font-weight: bold;
+    /* font-family: 'Poiret One', cursive; */
+    font-family: 'Playfair Display', serif;
+
+    /* font-weight: bold; */
     font-size: 2.4vh;
 }
 
@@ -66,7 +90,9 @@ export default {
 #hello {
     margin-top: 3rem;
     font-size: 4.6rem;
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
+    font-family: 'Poiret One', cursive;
+
     color: black;
     /* mix-blend-mode: difference; */
 }

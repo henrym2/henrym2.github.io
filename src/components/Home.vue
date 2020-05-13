@@ -11,6 +11,9 @@
     <transition name="slideright">
       <AboutMe v-if="page == 3"></AboutMe>
     </transition>
+    <transition name="slideright">
+      <Contact v-if="page == 2"></Contact>
+    </transition>
   </div>
 </template>
 
@@ -18,12 +21,14 @@
 import Title from './Title.vue'
 import Projects from './Projects'
 import AboutMe from './AboutMe'
+import Contact from './Contact'
 export default {
   name: 'App',
   components: {
     Title,
     Projects,
-    AboutMe
+    AboutMe,
+    Contact
   },
   data () {
     return {
@@ -58,7 +63,7 @@ export default {
   align-content: center;
   align-items: center;
   justify-content: center;
-  height: 99vh;
+  height: 95vh;
   z-index: 0;
 }
 

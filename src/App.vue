@@ -5,6 +5,10 @@
     <transition name="fade">
     <Menu v-show="showMenu" @pageChange="toPage"></Menu>
     </transition>
+    <div class="bottomBar">
+      <p class="made-with">Made with VueJs</p>
+      <time class="deploy" datetime="13/05/2020">{{new Date().toLocaleDateString()}}</time>
+    </div>
   </div>
 </template>
 
@@ -49,6 +53,8 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -58,7 +64,24 @@ export default {
   align-content: center;
   align-items: center;
   justify-content: center;
-  height: 100%
+  height: 100%;
+  overflow: hidden;
+}
+
+.deploy {
+  margin-left: auto;
+  margin-right: 3vw;
+}
+
+.made-with {
+  margin-left: 1vw;
+}
+
+.bottomBar {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  display: flex;
+  flex-direction: row;
 }
 
 .fade-enter-active {
