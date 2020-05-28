@@ -50,9 +50,10 @@ export default {
 .topBar{
     color: #e43f5a;
     display: flex;
-    position: absolute;
+    position: fixed;
     flex-direction: row;
     width: 99%;
+    z-index: 100;
 }
 
 #location {

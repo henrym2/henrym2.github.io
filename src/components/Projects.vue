@@ -86,16 +86,50 @@ data () {
 #projects {
     /* overflow: scroll; */
     overflow: hidden;
-    position: absolute;
-    right: -7.5vw;
-    top: 2vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-self: center;
+    right: 4vw;
+    top: 5vh;
+    width: 90vw;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: auto;
 }
+
+@media(min-width: 600px) {
+  #projects {
+    grid-template-columns: auto auto;
+  }
+}
+
+
+@media (min-width: 900px) {
+  #projects {
+    grid-template-columns: auto auto auto;
+  }
+
+  .project {
+  max-width: 30vw;
+}
+}
+
+
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+   display: flex;
+   justify-self: end;
+   
+}
+
+/* .project {
+  color: white;
+  background-color: black;
+} */
+
 
 .title, .subtitle {
   font-family: 'Playfair Display', serif;
@@ -118,17 +152,7 @@ data () {
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
-.project {
-  margin-right: 0.5vw
-}
 
-#thermapoll-card {
-  width: 30vw;
-}
-
-#gitvis-card {
-  width : 25vw;
-}
 
 #thermapoll-image {
   background-color: black;
@@ -139,17 +163,10 @@ data () {
   width: inherit
 }
 
-#githubtui-card {
-  width: 30vw;
-}
-
 #githubtui-image {
   width: inherit
 }
 
-#eviabi-card {
-  width: 30vw;
-}
 
 
 </style>
