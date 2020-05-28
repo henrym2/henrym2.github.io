@@ -79,7 +79,7 @@ export default {
 
 .bottomBar {
   font-family: 'Playfair Display', serif;
-  font-style: italic;
+  color: #e43f5a;
   display: flex;
   flex-direction: row;
 }

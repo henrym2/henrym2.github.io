@@ -40,6 +40,7 @@ h1 {
   font-family: 'Playfair Display', serif;
 }
 h2 {
+  color: #e43f5a;
   font-family: 'Poiret One', cursive;
   font-size: 5vw;
   margin: -2vw 0 0 16vw 

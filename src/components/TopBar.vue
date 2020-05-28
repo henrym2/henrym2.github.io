@@ -10,9 +10,9 @@
                 </svg>
                 <svg x="0" y="0" width="2.2vw" height="2.5vh" v-if="showMenu">
                     <line x1="0" y1="0" x2="1.5vw" y2="2.3vh"
-                    style="stroke:rgb(255,255,255);stroke-width:2"></line>
+                    style="stroke:#e43f5a;stroke-width:2"></line>
                     <line x1="1.5vw" y1="0" x2="0vw" y2="2.3vh"
-                    style="stroke:rgb(255,255,255);stroke-width:2"></line>
+                    style="stroke:#e43f5a;stroke-width:2"></line>
                 </svg>
             </button>
         </div>
@@ -48,6 +48,7 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 .topBar{
+    color: #e43f5a;
     display: flex;
     position: absolute;
     flex-direction: row;
@@ -58,7 +59,6 @@ export default {
     margin-top: 1.8vh;
     margin-left: 1vw;
     font-family: 'Playfair Display', serif;
-    font-style: italic;
     font-size: 2.5vh;
 }
 
@@ -76,6 +76,7 @@ button {
     margin-top: 2vh;
     margin-left: auto;
     margin-right: 2vw;
-        z-index: 3;
+    z-index: 3;
+    fill: #e43f5a;
 }
 </style>

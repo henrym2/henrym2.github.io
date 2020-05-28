@@ -124,14 +124,10 @@ data () {
 
 #thermapoll-card {
   width: 30vw;
-  margin-bottom: -3vw 
-  /* height: 20 */
 }
 
 #gitvis-card {
   width : 25vw;
-  margin-bottom: -8vw;
-
 }
 
 #thermapoll-image {
@@ -145,7 +141,6 @@ data () {
 
 #githubtui-card {
   width: 30vw;
-  margin-bottom: 3vh;
 }
 
 #githubtui-image {
@@ -153,7 +148,7 @@ data () {
 }
 
 #eviabi-card {
-  width: 28vw;
+  width: 30vw;
 }
 
 

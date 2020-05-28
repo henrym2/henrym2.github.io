@@ -51,7 +51,7 @@ export default {
   width: 100%;
 }
 .arrow-top:after, .arrow-bottom:after {
-  background-color: #b0c5e0;
+  background-color: #e43f5a;
   content: '';
   height: 100%;
   position: absolute;
